@@ -29,6 +29,7 @@ export async function generateDrinkRecipes(ingredients: string): Promise<Recipe[
 
     // Extract text response
     const response = result.response.text();
+    // console.log(response);
 
     // Parse the JSON response safely
     return parseRecipes(response);
