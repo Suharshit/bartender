@@ -26,6 +26,7 @@ export async function generateDrinkRecipes(ingredients: string): Promise<Recipe[
     const result = await model.generateContent({
       contents: [{ role: "user", parts: [{ text: createPrompt(ingredients) }] }]
     });
+    console.log(result);
 
     // Extract text response
     const response = result.response.text();

@@ -48,10 +48,6 @@ export default function Home() {
 
   return (
     <main className="container mx-auto p-4 max-w-2xl">
-      <h1 className="text-4xl font-bold mb-6 text-center text-primary">
-        AI Bartender
-      </h1>
-      
       <form onSubmit={handleSubmit} className="mb-6">
         <div className="flex space-x-2">
           <Input
@@ -61,7 +57,7 @@ export default function Home() {
             placeholder="Enter ingredients (comma-separated)"
             className="flex-grow"
           />
-          <Button type="submit" disabled={isLoading}>
+          <Button variant={"outline"} type="submit" disabled={isLoading} className='text-zinc-900 text-lg font-semibold cursor-pointer'>
             {isLoading ? 'Mixing...' : 'Get Recipes'}
           </Button>
         </div>
@@ -78,7 +74,7 @@ export default function Home() {
 
       {isLoading && (
         <div className="text-center">
-          <p className="text-primary">Shaking up some creative cocktails...</p>
+          <p className="text-white">Shaking up some creative cocktails...</p>
         </div>
       )}
 
@@ -88,7 +84,7 @@ export default function Home() {
           {recipes.map((recipe, index) => (
             <div 
               key={index} 
-              className="bg-white shadow-md rounded-lg p-4 mb-4 hover:shadow-lg transition-shadow"
+              className="bg-white text-zinc-900 shadow-md rounded-lg p-4 mb-4 hover:shadow-lg transition-shadow"
             >
               <h3 className="text-xl font-bold mb-2 text-primary">{recipe.name}</h3>
               
