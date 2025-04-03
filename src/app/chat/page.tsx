@@ -17,8 +17,6 @@ export default function Home() {
     setIsLoading(true);
     setError(null);
     
-    // Split ingredients by comma and trim whitespace
-    // const ingredientList = ingredients.split(',').map(ing => ing.trim()).filter(Boolean);
     const ingredientList = ingredients;
     
     if (ingredientList.length === 0) {
@@ -34,8 +32,6 @@ export default function Home() {
         setError('No recipes could be generated. Please try different ingredients.');
       } else {
         setRecipes(generatedRecipes);
-        // const conversation = await axios.post('/api/conversation', generatedRecipes);
-        // console.log(conversation);
       }
     } catch (error) {
       console.error('Error fetching recipes:', error);
