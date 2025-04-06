@@ -88,14 +88,12 @@ const page = () => {
                     </div> */}
                     
                     <div className="flex justify-center space-x-4 border-t pt-4">
-                      <a 
-                        href={dev.social.github} 
-                        target="_blank"
-                        rel="noopener noreferrer"
+                      <Link
+                        href={dev.social.github}
                         className="text-gray-600 hover:text-gray-900"
                       >
                         <Github size={24} />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
